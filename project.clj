@@ -8,8 +8,14 @@
     [compojure "1.6.1"]
     [ring/ring-jetty-adapter "1.7.1"]
     [ring "1.7.1"]
+    [environ "1.0.0"]
   ]
   :repl-options {:init-ns crandom.core}
   :uberjar-name "crandom-standalone.jar"
-  :profiles {:uberjar {:aot :all} comment(:production {:env {:production true} :main crandom.web}) :dev {:main crandom.web/-dev-main}}
+  :profiles {:uberjar {:aot :all} :dev {:main crandom.web/-dev-main}}
+  :min-lein-version "2.0.0"
+  :hooks [environ.leiningen.hooks]
+  :plugins [[environ/environ.lein "0.3.1"]]
+  ; :comment (comment :production {:env {:production true} :main crandom.web})
   )
+ 
