@@ -8,7 +8,8 @@
     [compojure "1.6.1"]
     [ring/ring-jetty-adapter "1.7.1"]
     [ring "1.7.1"]
-
   ]
   :repl-options {:init-ns crandom.core}
-  :main crandom.web)
+  :uberjar-name "crandom-standalone.jar"
+  :profiles {:uberjar {:aot :all} comment(:production {:env {:production true} :main crandom.web}) :dev {:main crandom.web/-dev-main}}
+  )

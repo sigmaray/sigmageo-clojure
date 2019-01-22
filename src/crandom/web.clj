@@ -8,8 +8,8 @@
   (GET "/" [] "<h2>Hello World</h2>")
   (GET "/random" [] ((shell/sh "shuf" "-n 1" "resources/US.json") :out)))
 
-(def reloadable-app
-  (wrap-reload #'app))
+(defn -dev-main [port]
+  (ring/run-jetty (wrap-reload #'app) {:port (Integer. port)}))
 
 (defn -main []
-  (ring/run-jetty #'reloadable-app {:port 7070 :join? false}))
+  (ring/run-jetty #'app {:port 7070 :join? false}))
