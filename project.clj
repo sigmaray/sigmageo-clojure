@@ -16,6 +16,7 @@
   :min-lein-version "2.0.0"
   :hooks [environ.leiningen.hooks]
   :plugins [[environ/environ.lein "0.3.1"]]
+  :resource-paths ["resources"]
   ; :comment (comment :production {:env {:production true} :main crandom.web})
   )
  
