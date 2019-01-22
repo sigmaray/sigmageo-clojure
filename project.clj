@@ -9,14 +9,13 @@
     [ring/ring-jetty-adapter "1.7.1"]
     [ring "1.7.1"]
     [environ "1.0.0"]
+    [org.clojure/data.json "0.2.6"]
   ]
   :repl-options {:init-ns crandom.core}
   :uberjar-name "crandom-standalone.jar"
   :profiles {:uberjar {:aot :all} :dev {:main crandom.web/-dev-main}}
+  ; :comment (comment :production {:env {:production true} :main crandom.web})
   :min-lein-version "2.0.0"
   :hooks [environ.leiningen.hooks]
   :plugins [[environ/environ.lein "0.3.1"]]
-  :resource-paths ["resources"]
-  ; :comment (comment :production {:env {:production true} :main crandom.web})
   )
- 
