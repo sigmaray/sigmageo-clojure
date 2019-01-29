@@ -1,6 +1,6 @@
-(ns crandom.core-test
+(ns sigmageo.core-test
   (:require [clojure.test :refer :all]
-            [crandom.core :refer :all]))
+            [sigmageo.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

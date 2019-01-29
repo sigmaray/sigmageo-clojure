@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/crandom-standalone.jar clojure.main -m crandom.web
+web: java $JVM_OPTS -cp target/sigmageo-standalone.jar clojure.main -m sigmageo.web

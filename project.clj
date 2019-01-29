@@ -1,4 +1,4 @@
-(defproject crandom "0.1.0-SNAPSHOT"
+(defproject sigmageo "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -11,10 +11,10 @@
     [environ "1.0.0"]
     [org.clojure/data.json "0.2.6"]
   ]
-  :repl-options {:init-ns crandom.core}
-  :uberjar-name "crandom-standalone.jar"
-  :profiles {:uberjar {:aot :all} :dev {:main crandom.web/-dev-main}}
-  ; :comment (comment :production {:env {:production true} :main crandom.web})
+  :repl-options {:init-ns sigmageo.core}
+  :uberjar-name "sigmageo-standalone.jar"
+  :profiles {:uberjar {:aot :all} :dev {:main sigmageo.web/-dev-main}}
+  ; :comment (comment :production {:env {:production true} :main sigmageo.web})
   :min-lein-version "2.0.0"
   :hooks [environ.leiningen.hooks]
   :plugins [[environ/environ.lein "0.3.1"]]

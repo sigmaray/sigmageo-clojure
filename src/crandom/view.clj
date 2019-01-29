@@ -1,4 +1,4 @@
-(ns crandom.view
+(ns sigmageo.view
   (:use hiccup.page hiccup.element))
 
 (def KEY "AIzaSyDpFdOYgaCQZCPNeiP0NhnXofDYmCJFaiY")

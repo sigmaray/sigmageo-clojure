@@ -1,3 +1,3 @@
-# Introduction to crandom
+# Introduction to sigmageo
 
 TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)
