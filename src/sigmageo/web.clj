@@ -14,13 +14,9 @@
                 (let [
                       j (json/read-str (rand-nth (clojure.string/split-lines (slurp (clojure.java.io/resource (str (rand-nth ["US" "CA" "GB"]) ".json"))))))
                       lat (j "lat")
-                      lng (j "lng")
-                      ]
+                      lng (j "lng")]
                   (view/r lat lng)))
            (route/not-found "Page not found"))
-
-(defn -dev-main [port]
-  (ring/run-jetty (wrap-reload #'app) {:port (Integer. port)}))
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 5000))]
